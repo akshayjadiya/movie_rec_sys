@@ -1,15 +1,16 @@
 import pandas as pd 
 import os 
 import numpy as np 
-path = '/Users/akshay/Documents/interviews/adobe_case_study/'
 
-ratings_df = pd.read_csv(os.path.join(path,'data','ratings.csv'))
+path = os.getcwd()
 
-movies_df = pd.read_csv(os.path.join(path,'data','movies.csv'))
+ratings_df = pd.read_csv(os.path.join(path,'ratings.csv'))
 
-tmdb_df = pd.read_csv(os.path.join(path,'data','tmdb_data_combine.csv'))
+movies_df = pd.read_csv(os.path.join(path,'movies.csv'))
 
-links_df = pd.read_csv(os.path.join(path,'data','links.csv'))
+tmdb_df = pd.read_csv(os.path.join(path,'tmdb_data_combine.csv'))
+
+links_df = pd.read_csv(os.path.join(path,'links.csv'))
 
 links_df = links_df.dropna(axis=0)
 links_df['tmdbId'] = links_df['tmdbId'].astype('int')
