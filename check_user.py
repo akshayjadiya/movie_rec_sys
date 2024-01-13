@@ -1,7 +1,8 @@
 import pandas as pd 
 import os 
-path = '/Users/akshay/Documents/interviews/adobe_case_study/'
-ratings_df = pd.read_csv(os.path.join(path,'data','ratings.csv'))
+
+path = os.getcwd()
+ratings_df = pd.read_csv(os.path.join(path,'ratings.csv'))
 
 
 def check_user(user_id):
