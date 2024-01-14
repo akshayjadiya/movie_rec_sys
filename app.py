@@ -20,7 +20,7 @@ if st.session_state.stage == 0:
 
 if st.session_state.stage >= 1:
     # name = st.text_input('Name', on_change=set_state, args=[2])
-    text_input = st.text_input("Enter user ID of the customer")
+    text_input = st.text_input("Enter user ID of the customer (only numbers")
     st.button('Generate Recommendations', on_click=set_state, args=[2]) 
     
     
